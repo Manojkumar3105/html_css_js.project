@@ -1,49 +1,59 @@
 function process() {
-  const username = document.getElementById('username').value;
-  const email = document.getElementById('email').value;
-  const pass = document.getElementById('pass').value;
-  const cpass = document.getElementById('cpass').value;
+  const username = document.getElementById('username');
+  const email = document.getElementById('email');
+  const pass = document.getElementById('pass');
+  const cpass = document.getElementById('cpass');
 
-  if (username === '') {
+  if (username.value === '') {
     document.getElementById('error-username').innerText = 'Required...';
-    
+    username.style.setProperty('--color', 'red');
   }
-  else if (username !== '') {
+  else if (username.value !== '') {
     document.getElementById('error-username').innerText = '';
+    username.style.setProperty('--color', ' rgb(0, 234, 255)');
   }
 
 
 
-  if (email === '') {
+  if (email.value === '') {
     document.getElementById('error-email').innerText = 'Required...';
+    email.style.setProperty('--color', 'red');
   }
-  else if (email !== '') {
+  else if (email.value !== '') {
     document.getElementById('error-email').innerText = '';
+    email.style.setProperty('--color', ' rgb(0, 234, 255)');
   }
 
 
 
-  if (pass === '') {
+  if (pass.value === '') {
     document.getElementById('error-pass').innerText = 'Required...';
+    pass.style.setProperty('--color', 'red');
   }
-  else if (pass !== '') {
+  else if (pass.value !== '') {
     document.getElementById('error-pass').innerText = '';
+    pass.style.setProperty('--color', ' rgb(0, 234, 255)');
   }
 
 
 
-  if (cpass === '') {
+  if (cpass.value === '') {
     document.getElementById('error-cpass').innerText = 'Required...';
+    cpass.style.setProperty('--color', 'red');
   }
-   else if (cpass !== '') {
+   else if (cpass.value !== '') {
     document.getElementById('error-cpass').innerText = '';
+    cpass.style.setProperty('--color', ' rgb(0, 234, 255)');
   }
 
-if(pass !== cpass && pass !== '' && cpass !== ''){
+if(pass.value !== cpass.value && pass.value !== '' && cpass.value !== ''){
 document.getElementById('error-cpass').innerText = 'no match';
+cpass.style.setProperty('--color', 'red');
 }
 
 
 
 
 }
+
+
